@@ -16,6 +16,14 @@ header {
   padding: 20px;
 }
 
+main {
+  display: flex;            /* Enable flexbox */
+  flex-direction: column;   /* Stack children vertically */
+  min-height: 100vh;       /* Make the main section full height */
+  padding: 20px;           /* Add padding */
+  border: 1px solid #ccc;  /* Optional: border for visibility */
+}
+
 h1 {
   margin: 0;
   font-size: 36px;
@@ -115,4 +123,27 @@ footer p {
     display: block;
     margin: 10px 0;
   }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.box {
+  background-color: green;
+  animation: slideIn 1s ease forwards;
+}
+
+.sticky-div {
+  background-color: #007bff; /* Blue background */
+  color: white;               /* White text color */
+  text-align: center;         /* Center align text */
+  padding: 10px;             /* Add padding */
 }
